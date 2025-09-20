@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Reverse Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Code Reverse Agent</h1>
+        <form method="post">
+            <label for="text">Enter text:</label>
+            <input type="text" id="text" name="text">
+            <button type="submit">Reverse</button>
+        </form>
+        {% if reversed_text %}
+            <div class="output">
+                <p>Reversed text: {{ reversed_text }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
